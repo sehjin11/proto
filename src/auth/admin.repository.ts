@@ -10,7 +10,7 @@ import {
 @EntityRepository(Admin)
 export class AdminRepository extends Repository<Admin> {
   async createAdmin(authCredentialDto: AuthCredentialDto): Promise<object> {
-    const { name: adminname, password } = authCredentialDto;
+    const { userid: adminname, password } = authCredentialDto;
 
     const salt = await bcrypt.genSalt();
     const hashedPW = await bcrypt.hash(password, salt);
