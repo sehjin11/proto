@@ -60,7 +60,7 @@ export class Users extends BaseEntity {
   userName: string;
 
   @Column({ nullable: true })
-  projectId: string;
+  projectCode: string;
 
   @Column('text', { array: true })
   watchSN: string[];
@@ -86,25 +86,25 @@ export class TakeMeds extends BaseEntity {
   @Column({ nullable: false })
   watchSN: string;
 
-  @Column()
+  @Column({ nullable: true })
   beacon: string;
 
-  @Column()
+  @Column({ nullable: true })
   projectCode: string;
 
-  @Column()
-  type: string;
+  @Column({ nullable: true })
+  inputType: string;
 
-  @Column()
+  @Column({ nullable: true })
   medType: string;
 
   @Column()
-  time: Date;
+  reportTime: Date;
 
   @Column()
-  takeMedicine: boolean;
+  takenMeds: boolean;
 
-  @Column()
+  @Column({ nullable: true })
   timeStamp: Date;
 }
 

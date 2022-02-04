@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { typeORMconfig } from './configs/typeorm.config';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { MemberModule } from './member/member.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     AuthModule,
     TypeOrmModule.forRoot(typeORMconfig),
     DashboardModule,
+    MemberModule,
   ],
   controllers: [AppController],
   providers: [AppService],
