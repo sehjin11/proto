@@ -50,12 +50,6 @@ export class Users extends BaseEntity {
   @PrimaryColumn()
   userCode: string;
 
-  @BeforeInsert()
-  generateUserCode() {
-    const date = new Date();
-    this.userCode = dateFormat(date) + uuid4().replace(/-/g, '').substr(0, 5);
-  }
-
   @Column({ nullable: true })
   userName: string;
 

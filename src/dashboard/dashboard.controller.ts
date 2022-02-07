@@ -39,18 +39,6 @@ export class DashboardController {
       endDate,
       projectCode,
     );
-    const data = {
-      status: 200,
-      data: [
-        { x: '01.10 (월)', y: '2209.67' },
-        { x: '01.11 (화)', y: '2655.33' },
-        { x: '01.12 (수)', y: '1720.50' },
-        { x: '01.13 (목)', y: '1804.00' },
-        { x: '01.14 (금)', y: '3060.83' },
-        { x: '01.15 (토)', y: '1459.17' },
-        { x: '01.16 (일)', y: '209.00' },
-      ],
-    };
     return weeklyWalkingCount;
   }
 
